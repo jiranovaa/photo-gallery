@@ -1,0 +1,181 @@
+html, body, main {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to top, #C0C0C0, #F5F5F5)
+}
+
+main {
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 800px;
+    height: auto;
+    box-shadow: 0px 0px 4px #303030;
+    border-radius: 1px;
+}
+
+div.arrows {
+    background-color: #fff;
+    flex: 0 0 5%;
+    height: 100%;
+    border-radius: 1px;
+}
+
+.img-arrow {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#arrow-right {
+    transform: rotate(0.5turn);
+}
+
+.main-content {
+    flex: 0 0 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grey-container {
+    font-family: 'Baloo Bhaina 2', cursive;
+    line-height: 1.1em;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    box-sizing: border-box;
+    padding: 2px 10px;
+    margin: 0px;
+    background-color: #303030;
+    opacity: 0.8;
+}
+
+.grey-container h1 {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.grey-container p {
+    font-weight: 400;
+    font-size: 0.8em;
+    color: #F5F5F5;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        max-width: 800px;
+        min-width: 200px;
+    }
+
+    .grey-container {
+        line-height: 0.8em;
+    }
+
+    .grey-container h1 {
+        font-size: 0.8em;
+    }
+
+    .grey-container p {
+        font-size: 0.6em;
+    }
+}
+
+
+.container2 {
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+.thumbnail-container {
+    width: 40px;
+    height: 40px;
+    margin: 10px 5px;
+    display: block;
+    border: 2px solid #fff;
+    box-shadow: 0px 1px 1px #303030;
+    border-radius: 1px;
+    opacity: 0.95;
+    cursor: pointer;
+    position: relative;
+}
+
+.thumbnail-container.highlight {
+    border: 3px solid #fff;
+    box-shadow: 0px 3px 3px #303030;
+}
+
+.thumbnail-container.highlight .arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.thumbnail-container .thumbnail {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.thumbnail-title {
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-weight: 600;
+    font-size: 0.8em;
+    width: max-content;
+    max-width: 800px;
+    color: #fff;
+    background-color: #303030;
+    border-radius: 1px;
+    text-align: center;
+    padding: 0px 5px;
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+.thumbnail-container:hover .thumbnail-title {
+    visibility: visible;
+}
+
+@media only screen and (max-width: 800px) {
+    .thumbnail-container:hover .thumbnail-title {
+        visibility: hidden;
+    }
+}
+
+.thumbnail-title .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #303030;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
